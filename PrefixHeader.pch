@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  PictureScannerDemo
+//
+//  Created by lemo on 2017/8/7.
+//  Copyright © 2017年 MyCompany. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//获取屏幕宽度
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
+//获取屏幕高度
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// 距离左边距离
+#define kLeftGap 15
+// 距离顶部距离
+#define kTopGap 10
+
+#endif /* PrefixHeader_pch */

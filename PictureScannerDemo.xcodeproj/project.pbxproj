@@ -15,6 +15,8 @@
 		BC6C48BB1F38571800D8C19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6C48B91F38571800D8C19C /* LaunchScreen.storyboard */; };
 		BC6C48C61F38571900D8C19C /* PictureScannerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6C48C51F38571900D8C19C /* PictureScannerDemoTests.m */; };
 		BC6C48D11F38571900D8C19C /* PictureScannerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6C48D01F38571900D8C19C /* PictureScannerDemoUITests.m */; };
+		BC6C48E01F3857AB00D8C19C /* ScanPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6C48DF1F3857AB00D8C19C /* ScanPictureViewController.m */; };
+		BC6C48E31F38581200D8C19C /* ScanScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6C48E21F38581200D8C19C /* ScanScrollImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		BC6C48CC1F38571900D8C19C /* PictureScannerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureScannerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6C48D01F38571900D8C19C /* PictureScannerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureScannerDemoUITests.m; sourceTree = "<group>"; };
 		BC6C48D21F38571900D8C19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6C48DE1F3857AB00D8C19C /* ScanPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPictureViewController.h; sourceTree = "<group>"; };
+		BC6C48DF1F3857AB00D8C19C /* ScanPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPictureViewController.m; sourceTree = "<group>"; };
+		BC6C48E11F38581200D8C19C /* ScanScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanScrollImageView.h; sourceTree = "<group>"; };
+		BC6C48E21F38581200D8C19C /* ScanScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanScrollImageView.m; sourceTree = "<group>"; };
+		BC6C48E41F38589900D8C19C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,7 @@
 		BC6C489F1F38571800D8C19C = {
 			isa = PBXGroup;
 			children = (
+				BC6C48E41F38589900D8C19C /* PrefixHeader.pch */,
 				BC6C48AA1F38571800D8C19C /* PictureScannerDemo */,
 				BC6C48C41F38571900D8C19C /* PictureScannerDemoTests */,
 				BC6C48CF1F38571900D8C19C /* PictureScannerDemoUITests */,
@@ -110,6 +118,7 @@
 				BC6C48B91F38571800D8C19C /* LaunchScreen.storyboard */,
 				BC6C48BC1F38571800D8C19C /* Info.plist */,
 				BC6C48AB1F38571800D8C19C /* Supporting Files */,
+				BC6C48E51F38791A00D8C19C /* Scanner */,
 			);
 			path = PictureScannerDemo;
 			sourceTree = "<group>";
@@ -138,6 +147,17 @@
 				BC6C48D21F38571900D8C19C /* Info.plist */,
 			);
 			path = PictureScannerDemoUITests;
+			sourceTree = "<group>";
+		};
+		BC6C48E51F38791A00D8C19C /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				BC6C48DE1F3857AB00D8C19C /* ScanPictureViewController.h */,
+				BC6C48DF1F3857AB00D8C19C /* ScanPictureViewController.m */,
+				BC6C48E11F38581200D8C19C /* ScanScrollImageView.h */,
+				BC6C48E21F38581200D8C19C /* ScanScrollImageView.m */,
+			);
+			name = Scanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +295,8 @@
 			files = (
 				BC6C48B31F38571800D8C19C /* ViewController.m in Sources */,
 				BC6C48B01F38571800D8C19C /* AppDelegate.m in Sources */,
+				BC6C48E31F38581200D8C19C /* ScanScrollImageView.m in Sources */,
+				BC6C48E01F3857AB00D8C19C /* ScanPictureViewController.m in Sources */,
 				BC6C48AD1F38571800D8C19C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,7 +448,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/lemo/Desktop/PictureScannerDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = PictureScannerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CaiYuan.PictureScannerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,7 +461,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/lemo/Desktop/PictureScannerDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = PictureScannerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CaiYuan.PictureScannerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
