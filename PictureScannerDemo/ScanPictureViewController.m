@@ -57,7 +57,6 @@
 
 - (void)creatSubViews{
     [self.view addSubview:self.mainScrollView];
-    NSLog(@"self.imageArray:%@",self.imageArray);
     for (int i = 0; i < self.imageArray.count; i++) {
         ScanScrollImageView *scrollImageView = [[ScanScrollImageView alloc] initWithFrame:CGRectMake(KScreenWidth * i, 0, KScreenWidth, KScreenHeight)];
         scrollImageView.imageView.image = [UIImage imageNamed:_imageArray[i]];

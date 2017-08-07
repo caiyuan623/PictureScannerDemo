@@ -11,8 +11,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic, weak) ScanPictureViewController *scanPicVC;
-
 @property (nonatomic, strong) NSArray * imgArray;
 
 @end
@@ -35,7 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     //图片view
     CGFloat imgWidth = (KScreenWidth - 3*kLeftGap)/3;
@@ -61,17 +58,14 @@
      scanVC.imageArray = self.imgArray;
     scanVC.currentIndex = tap.view.tag - 100;
     scanVC.view.alpha = 0;    
-    NSLog(@"self.imageArray:%@,self.imgArray:%@",scanVC.imageArray,self.imgArray);
-    
-    _scanPicVC = scanVC;
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window addSubview:_scanPicVC.view];
+    [window addSubview:scanVC.view];
     
     [self addChildViewController:scanVC];
     
     [UIView animateWithDuration:0.5 animations:^{
-        _scanPicVC.view.alpha = 1;
+        scanVC.view.alpha = 1;
     }];
 
 }
